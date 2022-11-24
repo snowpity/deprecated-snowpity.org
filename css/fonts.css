@@ -1,39 +1,54 @@
+@charset "utf-8";
+
+/* Equestria */
 @font-face {
-    font-family: "Equestria";
-    src:
-        url("./fonts/Equestria.woff2") format("woff2"),
-        url("./fonts/Equestria.woff") format("woff"),
-        url("./fonts/Equestria.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "Equestria";
+	src:
+		local("Equestria Regular"),
+		local("Equestria"),
+		url("../fonts/Equestria.woff2") format("woff2"),
+		url("../fonts/Equestria.woff") format("woff"),
+		url("../fonts/Equestria.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Equestria";
+	src:
+		local("Equestria Italic"),
+		url("../fonts/Equestria_Italic.woff2") format("woff2"),
+		url("../fonts/Equestria_Italic.woff") format("woff"),
+		url("../fonts/Equestria_Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Equestria";
+	src:
+		local("Equestria Bold"),
+		url("../fonts/Equestria_Bold.woff2") format("woff2"),
+		url("../fonts/Equestria_Bold.woff") format("woff"),
+		url("../fonts/Equestria_Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Equestria";
+	src:
+		local("Equestria Bold Italic"),
+		url("../fonts/Equestria_Bold-Italic.woff2") format("woff2"),
+		url("../fonts/Equestria_Bold-Italic.woff") format("woff"),
+		url("../fonts/Equestria_Bold-Italic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
 }
 
+/* Woodrow */
 @font-face {
-    font-family: "Equestria";
-    src:
-        url("./fonts/Equestria_Italic.woff2") format("woff2"),
-        url("./fonts/Equestria_Italic.woff") format("woff"),
-        url("./fonts/Equestria_Italic.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Equestria";
-    src:
-        url("./fonts/Equestria_Bold.woff2") format("woff2"),
-        url("./fonts/Equestria_Bold.woff") format("woff"),
-        url("./fonts/Equestria_Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Equestria";
-    src:
-        url("./fonts/Equestria_Bold-Italic.woff2") format("woff2"),
-        url("./fonts/Equestria_Bold-Italic.woff") format("woff"),
-        url("./fonts/Equestria_Bold-Italic.ttf") format("truetype");
-    font-weight: bold;
-    font-style: italic;
+	font-family: Woodrow;
+	src: local("Woodrow"), 
+		local("Woodrow W00 Reg"), 
+		local("WoodrowW00-Reg"), 
+		url(../fonts/woodrow.woff2) format("woff2"), 
+		url(../fonts/woodrow.ttf) format("truetype");
 }

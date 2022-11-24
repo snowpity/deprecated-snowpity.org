@@ -1,25 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Snowpity, Inc.</title>
-        <link rel="stylesheet" href="./css/fonts.css" preload="true">
-        <link rel="stylesheet" href="./css/style.css" preload="true">
-    </head>
-    <body>
-        <div id="content">
-            <h1 id="header"></h1>
-            <p id="purpose">
-                Snowpity, Inc. is a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need;<br />
-                to bring together artists to practice and hone their craft of pony art;<br />
-                and to educate the world about the beauty that resides within every mare.
-            </p>
-            <p id="contact">
-                Contact us at<br />
-                <a href="mailto:relations@snowpity.org">relations@snowpity.org</a>
-            </p>
-        </div>
-    </body>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="css/fonts.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<meta content="Snowpity, Inc." property="og:title">
+		<meta content="Snowpity, Inc., is a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need; to bring together artists to practice and hone their craft of pony art; and to educate the world about the beauty that resides within every mare." property="og:description">
+		<meta content="website" property="og:type">
+		<meta content="https://snowpity.org" property="og:url">
+		<meta content="https://snowpity.org/logo.png" property="og:image">
+		<meta content="Logo for Snowpity, Inc." property="og:image:alt">
+		<meta content="1024" property="og:image:width">
+		<meta content="1024" property="og:image:height">
+		<meta content="image/png" property="og:image:type">
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org", 
+				"@type": "NGO", 
+				"address": {
+					"@type": "PostalAddress", 
+					"addressCountry": "USA", 
+					"addressLocality": "St Petersburg", 
+					"addressRegion": "Florida", 
+					"postalCode": "33702-4305", 
+					"streetAddress": "7901 4th St N Ste 10746"
+				}, 
+				"description": "Snowpity, Inc., is a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need; to bring together artists to practice and hone their craft of pony art; and to educate the world about the beauty that resides within every mare.", 
+				"email": "info@snowpity.org", 
+				"foundingDate": "2022-08-26", 
+				"logo": "https://snowpity.org/logo.png", 
+				"name": "Snowpity, Inc.", 
+				"nonprofitStatus": "Nonprofit501c3", 
+				"taxID": "92-0304588", 
+				"url": "https://snowpity.org"
+			}
+		</script>
+		<link href="favicon.png" rel="icon" sizes="144x144" type="image/png">
+		<title>Snowpity, Inc.</title>
+	</head>
+	<body>
+		<svg role="presentation">
+			<defs>
+				<filter id="filter--darken-mare">
+					<feDiffuseLighting in="SourceGraphic" lighting-color="white" result="shadow">
+						<feDistantLight azimuth="315" elevation="40"></feDistantLight>
+					</feDiffuseLighting>
+					<feComposite in="SourceGraphic" in2="shadow" k1="1" k2="0" k3="0" k4="0" operator="arithmetic"></feComposite>
+				</filter>
+			</defs>
+		</svg>
+		<div id="background" role="presentation">
+			<picture>
+				<source 
+					sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
+					srcset="img/bg/bg-540w.avif 540w, img/bg/bg-720w.avif 720w, img/bg/bg-1280w.avif 1280w, img/bg/bg-1920w.avif 1920w, img/bg/bg-3840w.avif 3840w" 
+					type="image/avif">
+				<img 
+					id="background--field" 
+					sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
+					src="img/bg/bg-3840w.jpg" 
+					srcset="img/bg/bg-540w.jpg 540w, img/bg/bg-720w.jpg 720w, img/bg/bg-1280w.jpg 1280w, img/bg/bg-1920w.jpg 1920w, img/bg/bg-3840w.jpg 3840w" 
+					type="image/jpeg">
+			</picture>
+			<picture>
+				<source 
+					srcset="img/matinee-soiree/matinee-soiree-255w.webp, img/matinee-soiree/matinee-soiree-382.5w.webp 1.5x, img/matinee-soiree/matinee-soiree-510w.webp 2x, img/matinee-soiree/matinee-soiree-637.5w.webp 2.5x, img/matinee-soiree/matinee-soiree-765w.webp 3x" 
+					type="image/webp">
+				<img 
+					class="background--mare" 
+					id="background--matinee-soiree" 
+					srcset="img/matinee-soiree/matinee-soiree-255w.png, img/matinee-soiree/matinee-soiree-382.5w.png 1.5x, img/matinee-soiree/matinee-soiree-510w.png 2x, img/matinee-soiree/matinee-soiree-637.5w.png 2.5x, img/matinee-soiree/matinee-soiree-765w.png 3x" 
+					src="img/matinee-soiree/matinee-soiree-765w.png" 
+					type="image/png">
+			</picture>
+			<picture>
+				<source srcset="img/morning-mimosa/morning-mimosa-320w.webp, img/morning-mimosa/morning-mimosa-480w.webp 1.5x, img/morning-mimosa/morning-mimosa-640w.webp 2x" type="image/webp">
+				<img 
+					class="background--mare" 
+					id="background--morning-mimosa" 
+					src="img/morning-mimosa/morning-mimosa-804w.png" 
+					srcset="img/morning-mimosa/morning-mimosa-320w.png, img/morning-mimosa/morning-mimosa-804w.png 1.5x, img/morning-mimosa/morning-mimosa-804w.png 2.5x" 
+					type="image/png">
+			</picture>
+			<picture>
+				<source 
+					srcset="img/fair-flyer/fair-flyer-320w.webp, img/fair-flyer/fair-flyer-480w.webp 1.5x, img/fair-flyer/fair-flyer-640w.webp 2x, img/fair-flyer/fair-flyer-800w.webp 2.5x, img/fair-flyer/fair-flyer-960w.webp 3x" 
+					type="image/webp">
+				<img 
+					class="background--mare" 
+					id="background--fair-flyer" 
+					src="img/fair-flyer/fair-flyer-1148w.png" 
+					srcset="img/fair-flyer/fair-flyer-320w.png, img/fair-flyer/fair-flyer-480w.png 1.5x, img/fair-flyer/fair-flyer-640w.png 2x, img/fair-flyer/fair-flyer-1148w.png 2.5x" 
+					type="image/png">
+			</picture>
+		</div>
+		<main>
+			<h1>Snowpity</h1>
+			<div class="text-outline" id="purpose-statement">
+				Snowpity, Inc., is a 100% volunteer organization that holds events
+				<ul id="purposes">
+					<li>to raise funds to rescue, care for, and improve the lives of equines in need;</li>
+					<li>to bring together artists to practice and hone their craft of pony art; and</li>
+					<li>to educate the world about the beauty that resides within every mare.</li>
+				</ul>
+			</div>
+			<footer class="text-outline">
+				Contact us at
+				<address>
+					<a href="mailto:info@snowpity.org">info@snowpity.org</a>
+				</address>
+				<a href="https://paypal.me/snowpity">Help us help mares</a>
+			</footer>
+		</main>
+	</body>
 </html>

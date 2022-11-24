@@ -1,67 +1,143 @@
-* {
-    margin: 0;
+@charset "utf-8";
+
+/* globals */
+:root {
+	/* below sizes are defined in pixels if not specified */
+	--highlight-color: #c79dd7;
+	--max-font-size: 42;
+	--max-screen-width: 960;
+	--min-screen-width: 250;
+	--min-font-size: 32;
+
+	/* calculated vars */
+	--font-size-delta: calc(var(--max-font-size) - var(--min-font-size));
+	--max-screen-width-pixels: 1px * var(--max-screen-width);
+	--min-font-size-pixels: 1px * var(--min-font-size);
+	--screen-width-delta: calc(var(--max-screen-width) - var(--min-screen-width));
+	--variable-screen-width: calc((100vw - var(--max-screen-width-pixels)) / var(--screen-width-delta));
 }
+* { margin: 0; }
+html { font-size: calc(var(--min-font-size-pixels) + var(--font-size-delta) * var(--variable-screen-width)); }
 body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    min-width: 880px;
-
-    font-family: Equestria, serif;
+	color: white;
+	font-family: Woodrow, serif;
+	height: 100%;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	width: 100%;
 }
 
-#content {
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/* background image and mares */
+svg[role=presentation] {
+	height: 0;
+	visibility: hidden;
+}
+div#background {
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+img#background--field {
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+img.background--mare {
+	--max-width: 0; /* in pixels, don't specify unit */
+	--min-width: 0; /* in pixels, don't specify unit */
+	--min-width-pixels: 1px * var(--min-width);
+	--width-delta: calc(var(--max-width) - var(--min-width));
+	--width: calc(var(--min-width-pixels) + var(--width-delta) * var(--variable-screen-width));
+
+	filter: url(#filter--darken-mare) drop-shadow(1px 2px 4px black);
+}
+img#background--fair-flyer {
+	--max-width: 320;
+	--min-width: 280;
+
+	filter: drop-shadow(4px 60% 6px black);
+	position: absolute;
+	right: 1em;
+	top: 0.25em;
+	width: var(--width);
+}
+img#background--morning-mimosa {
+	--height-width-ratio: calc(1244 / 804);
+	--max-width: 320;
+	--min-width: 260;
+	--height: calc(var(--width) * var(--height-width-ratio));
+
+	bottom: 5vh;
+	position: absolute;
+	left: 1em;
+	width: var(--width);
+}
+@media (max-width: 660px) and (max-height: 390px) {
+	img#background--morning-mimosa { bottom: unset; }
+}
+img#background--matinee-soiree {
+	--max-width: 255;
+	--min-width: 175;
+
+	position: absolute;
+	right: calc(50vw - var(--width) / 2);
+	top: 45vh;
+	width: var(--width);
+}
+@media (max-height: 575px) {
+	img#background--matinee-soiree { top: 25vh; }
 }
 
-#header {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 15em;
+/* site content */
+main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-evenly;
+	margin: 0 1em;
 }
-#header::before {
-    position: absolute;
-    content: "Snowpity";
-    text-shadow: 1px 6px 2px rgba(77,77,77,0.89);
-    color: transparent;
-    z-index: -1;
+@media (max-height: 360px) {
+	main { justify-content: flex-start; }
 }
-#header::after {
-    content: "Snowpity";
-    background: linear-gradient(180deg, #FE2A98, #FE2A98);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    z-index: 1;
+h1 {
+	color: #ef4f91;
+	font-family: Equestria, serif;
+	font-size: clamp(3em, 12vw, 6em);
+	text-shadow: 1px 6px 2px rgba(77, 77, 77, 0.89);
 }
+div#purpose-statement {
+/*	letter-spacing: 0.1em;*/
+/*	line-height: 1em;*/
+}
+ul#purposes { list-style: none; }
+footer {
+	align-self: flex-end;
+	color: var(--highlight-color);
+	flex-shrink: 1;
+	font-size: 0.6em;
+	margin-right: 0.75em;
+	margin-top: 1em;
+	text-align: center;
+}
+footer a { color: var(--highlight-color); }
 
-#purpose {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    font-size: 2em;
-    transform: translate(-50%, 0);
-    text-align: center;
-}
-
-#contact {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-align: center;
-    font-size: 1.25em;
-    color: #DDFFF8;
-}
-#contact a {
-    color: #DDFFF8;
+/* helper classes */
+.text-outline {
+	--outline-color: black;
+	--outline-width: 0.05em;
+	text-shadow:
+		var(--outline-width) 0 var(--outline-color), 
+		0 var(--outline-width) var(--outline-color), 
+		calc(-1 * var(--outline-width)) 0 var(--outline-color), 
+		0 calc(-1 * var(--outline-width)) var(--outline-color), 
+		calc(-1 * var(--outline-width)) calc(-1 * var(--outline-width)) var(--outline-color), 
+		calc(-1 * var(--outline-width)) var(--outline-width) var(--outline-color), 
+		var(--outline-width) calc(-1 * var(--outline-width)) var(--outline-color), 
+		var(--outline-width) var(--outline-width) var(--outline-color);
 }
