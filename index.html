@@ -16,22 +16,60 @@
 		<meta content="image/png" property="og:image:type">
 		<script type="application/ld+json">
 			{
-				"@context": "https://schema.org", 
-				"@type": "NGO", 
-				"address": {
-					"@type": "PostalAddress", 
-					"addressCountry": "USA", 
-					"addressLocality": "St Petersburg", 
-					"addressRegion": "Florida", 
-					"postalCode": "33702-4305", 
-					"streetAddress": "7901 4th St N Ste 10746"
+				"@context": {
+					"@base": "https://snowpity.org/", 
+					"@version": 1.1, 
+					"@vocab": "https://schema.org"
 				}, 
+				"@graph": [
+					{
+						"@id": "", 
+						"@type": "WebSite", 
+						"author": { "@type": "Person", "url": "https://pone.social/@corpubro" }, 
+						"copyrightNotice": "Copyright Snowpity, Inc.", 
+						"description": "The Web site for Snowpity, Inc., a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need; to bring together artists to practice and hone their craft of pony art; and to educate the world about the beauty that resides within every mare.", 
+						"encodingFormat": "text/html", 
+						"inLanguage": "en", 
+						"name": "Snowpity, Inc.", 
+						"url": "https://snowpity.org"
+					}, 
+					{
+						"@id": "#PostalAddress", 
+						"@type": "PostalAddress", 
+						"addressCountry": "USA", 
+						"addressLocality": "St Petersburg", 
+						"addressRegion": "Florida", 
+						"postalCode": "33702-4305", 
+						"streetAddress": "7901 4th St N Ste 10746"
+					}, 
+					{
+						"@id": "img/logo.png", 
+						"@type": "ImageObject", 
+						"author": [
+							{ "@type": "Person", "url": "https://pone.social/@corpubro" }, 
+							{ "@type": "Person", "url": "https://twibooru.org/profiles/FacelessJr" }
+						], 
+						"caption": "Logo for Snowpity, Inc.", 
+						"contentUrl": "https://snowpity.org/img/logo.png", 
+						"embeddedTextCaption": "Snowpity", 
+						"encodingFormat": "image/png", 
+						"height": "1024 px", 
+						"url": "https://snowpity.org/img/logo.png", 
+						"width": "1024 px"
+					}
+				], 
+				"@id": "#Organization", 
+				"@type": "NGO", 
+				"address": { "@id": "#PostalAddress" }, 
 				"description": "Snowpity, Inc., is a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need; to bring together artists to practice and hone their craft of pony art; and to educate the world about the beauty that resides within every mare.", 
+				"duns": "110769306", 
 				"email": "info@snowpity.org", 
 				"foundingDate": "2022-08-26", 
-				"logo": "https://snowpity.org/img/logo.png", 
+				"logo": { "@id": "img/logo.png" }, 
+				"mainEntityOfPage": { "@id": "" }, 
 				"name": "Snowpity, Inc.", 
 				"nonprofitStatus": "Nonprofit501c3", 
+				"subjectOf": { "@id": "" }, 
 				"taxID": "92-0304588", 
 				"url": "https://snowpity.org"
 			}
@@ -58,6 +96,7 @@
 					srcset="img/bg/bg-540w.avif 540w, img/bg/bg-720w.avif 720w, img/bg/bg-1280w.avif 1280w, img/bg/bg-1920w.avif 1920w, img/bg/bg-3840w.avif 3840w" 
 					type="image/avif">
 				<img 
+					alt="" 
 					id="background--field" 
 					sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
 					src="img/bg/bg-3840w.jpg" 
@@ -69,6 +108,7 @@
 					srcset="img/matinee-soiree/matinee-soiree-255w.webp, img/matinee-soiree/matinee-soiree-382.5w.webp 1.5x, img/matinee-soiree/matinee-soiree-510w.webp 2x, img/matinee-soiree/matinee-soiree-637.5w.webp 2.5x, img/matinee-soiree/matinee-soiree-765w.webp 3x" 
 					type="image/webp">
 				<img 
+					alt="" 
 					class="background--mare" 
 					id="background--matinee-soiree" 
 					srcset="img/matinee-soiree/matinee-soiree-255w.png, img/matinee-soiree/matinee-soiree-382.5w.png 1.5x, img/matinee-soiree/matinee-soiree-510w.png 2x, img/matinee-soiree/matinee-soiree-637.5w.png 2.5x, img/matinee-soiree/matinee-soiree-765w.png 3x" 
@@ -78,6 +118,7 @@
 			<picture>
 				<source srcset="img/morning-mimosa/morning-mimosa-320w.webp, img/morning-mimosa/morning-mimosa-480w.webp 1.5x, img/morning-mimosa/morning-mimosa-640w.webp 2x" type="image/webp">
 				<img 
+					alt="" 
 					class="background--mare" 
 					id="background--morning-mimosa" 
 					src="img/morning-mimosa/morning-mimosa-804w.png" 
@@ -89,6 +130,7 @@
 					srcset="img/fair-flyer/fair-flyer-320w.webp, img/fair-flyer/fair-flyer-480w.webp 1.5x, img/fair-flyer/fair-flyer-640w.webp 2x, img/fair-flyer/fair-flyer-800w.webp 2.5x, img/fair-flyer/fair-flyer-960w.webp 3x" 
 					type="image/webp">
 				<img 
+					alt="" 
 					class="background--mare" 
 					id="background--fair-flyer" 
 					src="img/fair-flyer/fair-flyer-1148w.png" 
