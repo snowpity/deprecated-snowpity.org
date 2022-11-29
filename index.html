@@ -53,6 +53,17 @@
 				}, 
 				"@graph": [
 					{
+						"@id": "#DonateAction", 
+						"@type": "DonateAction", 
+						"actionStatus": "https://schema.org/PotentialActionStatus", 
+						"priceSpecification": {
+							"@type": "PriceSpecification", 
+							"minPrice": "1"
+						}, 
+						"target": "https://www.paypal.com/donate/?hosted_button_id=MRB5MPQF28K44", 
+						"url": "https://www.paypal.com/donate/?hosted_button_id=MRB5MPQF28K44"
+					}, 
+					{
 						"@id": "#PostalAddress", 
 						"@type": "PostalAddress", 
 						"addressCountry": "USA", 
@@ -87,6 +98,7 @@
 				"logo": { "@id": "img/logo.png" }, 
 				"name": "Snowpity, Inc.", 
 				"nonprofitStatus": "Nonprofit501c3", 
+				"potentialAction": { "@id": "#DonateAction" }, 
 				"subjectOf": { "@id": "" }, 
 				"taxID": "92-0304588", 
 				"url": "https://snowpity.org"
