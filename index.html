@@ -25,14 +25,33 @@
 					{
 						"@id": "", 
 						"@type": "WebSite", 
-						"author": { "@type": "Person", "url": "https://pone.social/@corpubro" }, 
 						"copyrightNotice": "Copyright Snowpity, Inc.", 
 						"description": "The Web site for Snowpity, Inc., a 100% volunteer organization that holds events to raise funds to rescue, care for, and improve the lives of equines in need; to bring together artists to practice and hone their craft of pony art; and to educate the world about the beauty that resides within every mare.", 
-						"encodingFormat": "text/html", 
 						"inLanguage": "en", 
 						"name": "Snowpity, Inc.", 
 						"url": "https://snowpity.org"
-					}, 
+					}
+				], 
+				"@id": "index.html", 
+				"@type": "AboutPage", 
+				"author": { "@type": "Person", "url": "https://pone.social/@corpubro" }, 
+				"encodingFormat": "text/html", 
+				"isPartOf": { "@id": "" }, 
+				"mainContentOfPage": { "@type": "WebPageElement", "cssSelector": "#purpose-statement" }, 
+				"relatedLink": "https://www.paypal.com/donate/?hosted_button_id=MRB5MPQF28K44", 
+				"significantLink": "https://www.paypal.com/donate/?hosted_button_id=MRB5MPQF28K44", 
+				"speakable": { "@type": "SpeakableSpecification", "cssSelector": "#purpose-statement" }, 
+				"url": "https://snowpity.org"
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": {
+					"@base": "https://snowpity.org/", 
+					"@version": 1.1, 
+					"@vocab": "https://schema.org"
+				}, 
+				"@graph": [
 					{
 						"@id": "#PostalAddress", 
 						"@type": "PostalAddress", 
@@ -66,7 +85,6 @@
 				"email": "info@snowpity.org", 
 				"foundingDate": "2022-08-26", 
 				"logo": { "@id": "img/logo.png" }, 
-				"mainEntityOfPage": { "@id": "" }, 
 				"name": "Snowpity, Inc.", 
 				"nonprofitStatus": "Nonprofit501c3", 
 				"subjectOf": { "@id": "" }, 
@@ -183,7 +201,7 @@
 				</ul>
 			</div>
 			<footer class="text-outline">
-				<a href="https://paypal.me/snowpity">Help us help mares</a>
+				<a href="https://www.paypal.com/donate/?hosted_button_id=MRB5MPQF28K44">Help us help mares</a>
 				<p>
 					Contact us at
 					<address>
