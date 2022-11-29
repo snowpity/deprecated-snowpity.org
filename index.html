@@ -45,12 +45,12 @@
 					{
 						"@id": "img/logo.png", 
 						"@type": "ImageObject", 
-						"author": [
+						"caption": "Logo for Snowpity, Inc.", 
+						"contentUrl": "https://snowpity.org/img/logo.png", 
+						"creator": [
 							{ "@type": "Person", "url": "https://pone.social/@corpubro" }, 
 							{ "@type": "Person", "url": "https://twibooru.org/profiles/FacelessJr" }
 						], 
-						"caption": "Logo for Snowpity, Inc.", 
-						"contentUrl": "https://snowpity.org/img/logo.png", 
 						"embeddedTextCaption": "Snowpity", 
 						"encodingFormat": "image/png", 
 						"height": "1024 px", 
@@ -90,54 +90,88 @@
 			</defs>
 		</svg>
 		<div id="background" role="presentation">
-			<picture>
-				<source 
-					sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
-					srcset="img/bg/bg-540w.avif 540w, img/bg/bg-720w.avif 720w, img/bg/bg-1280w.avif 1280w, img/bg/bg-1920w.avif 1920w, img/bg/bg-3840w.avif 3840w" 
-					type="image/avif">
-				<img 
-					alt="" 
-					id="background--field" 
-					sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
-					src="img/bg/bg-3840w.jpg" 
-					srcset="img/bg/bg-540w.jpg 540w, img/bg/bg-720w.jpg 720w, img/bg/bg-1280w.jpg 1280w, img/bg/bg-1920w.jpg 1920w, img/bg/bg-3840w.jpg 3840w" 
-					type="image/jpeg">
-			</picture>
-			<picture>
-				<source 
-					srcset="img/matinee-soiree/matinee-soiree-255w.webp, img/matinee-soiree/matinee-soiree-382.5w.webp 1.5x, img/matinee-soiree/matinee-soiree-510w.webp 2x, img/matinee-soiree/matinee-soiree-637.5w.webp 2.5x, img/matinee-soiree/matinee-soiree-765w.webp 3x" 
-					type="image/webp">
-				<img 
-					alt="" 
-					class="background--mare" 
-					id="background--matinee-soiree" 
-					srcset="img/matinee-soiree/matinee-soiree-255w.png, img/matinee-soiree/matinee-soiree-382.5w.png 1.5x, img/matinee-soiree/matinee-soiree-510w.png 2x, img/matinee-soiree/matinee-soiree-637.5w.png 2.5x, img/matinee-soiree/matinee-soiree-765w.png 3x" 
-					src="img/matinee-soiree/matinee-soiree-765w.png" 
-					type="image/png">
-			</picture>
-			<picture>
-				<source srcset="img/morning-mimosa/morning-mimosa-320w.webp, img/morning-mimosa/morning-mimosa-480w.webp 1.5x, img/morning-mimosa/morning-mimosa-640w.webp 2x" type="image/webp">
-				<img 
-					alt="" 
-					class="background--mare" 
-					id="background--morning-mimosa" 
-					src="img/morning-mimosa/morning-mimosa-804w.png" 
-					srcset="img/morning-mimosa/morning-mimosa-320w.png, img/morning-mimosa/morning-mimosa-804w.png 1.5x, img/morning-mimosa/morning-mimosa-804w.png 2.5x" 
-					type="image/png">
-			</picture>
-			<picture>
-				<source 
-					srcset="img/fair-flyer/fair-flyer-320w.webp, img/fair-flyer/fair-flyer-480w.webp 1.5x, img/fair-flyer/fair-flyer-640w.webp 2x, img/fair-flyer/fair-flyer-800w.webp 2.5x, img/fair-flyer/fair-flyer-960w.webp 3x" 
-					type="image/webp">
-				<img 
-					alt="" 
-					class="background--mare" 
-					id="background--fair-flyer" 
-					src="img/fair-flyer/fair-flyer-1148w.png" 
-					srcset="img/fair-flyer/fair-flyer-320w.png, img/fair-flyer/fair-flyer-480w.png 1.5x, img/fair-flyer/fair-flyer-640w.png 2x, img/fair-flyer/fair-flyer-1148w.png 2.5x" 
-					type="image/png">
-			</picture>
+			<!-- common metadata -->
+			<span id="metadata--creator-person-url--jr">
+				<span itemprop="creator" itemscope itemtype="https://schema.org/Person">
+					<link itemprop="url" href="https://twibooru.org/profiles/FacelessJr">
+				</span>
+			</span>
+			<span id="metadata--ispartof">
+				<meta itemid="https://snowpity.org/" itemprop="isPartOf" itemscope itemtype="https://schema.org/WebSite">
+			</span>
+
+			<!-- background image -->
+			<span itemid="https://snowpity.org/img/bg/" itemref="metadata--ispartof" itemscope itemtype="https://schema.org/ImageObject">
+				<picture>
+					<source 
+						sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
+						srcset="img/bg/bg-540w.avif 540w, img/bg/bg-720w.avif 720w, img/bg/bg-1280w.avif 1280w, img/bg/bg-1920w.avif 1920w, img/bg/bg-3840w.avif 3840w" 
+						type="image/avif">
+					<img 
+						alt="" 
+						id="background--field" 
+						itemprop="contentUrl url" 
+						sizes="(max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1280px) 1280px, (max-width: 1920px) 1920px, 3840px" 
+						src="img/bg/bg-3840w.jpg" 
+						srcset="img/bg/bg-540w.jpg 540w, img/bg/bg-720w.jpg 720w, img/bg/bg-1280w.jpg 1280w, img/bg/bg-1920w.jpg 1920w, img/bg/bg-3840w.jpg 3840w" 
+						type="image/jpeg">
+				</picture>
+				<span itemprop="creator" itemscope itemtype="https://schema.org/Person">
+					<link itemprop="url" href="https://pone.social/@corpubro">
+				</span>
+			</span>
+
+			<!-- matinee and soiree -->
+			<span itemid="https://snowpity.org/img/matinee-soiree/" itemref="metadata--creator-person-url--jr metadata--ispartof" itemscope itemtype="https://schema.org/ImageObject">
+				<picture>
+					<source 
+						srcset="img/matinee-soiree/matinee-soiree-255w.webp, img/matinee-soiree/matinee-soiree-382.5w.webp 1.5x, img/matinee-soiree/matinee-soiree-510w.webp 2x, img/matinee-soiree/matinee-soiree-637.5w.webp 2.5x, img/matinee-soiree/matinee-soiree-765w.webp 3x" 
+						type="image/webp">
+					<img 
+						alt="" 
+						class="background--mare" 
+						id="background--matinee-soiree" 
+						itemprop="contentUrl url" 
+						srcset="img/matinee-soiree/matinee-soiree-255w.png, img/matinee-soiree/matinee-soiree-382.5w.png 1.5x, img/matinee-soiree/matinee-soiree-510w.png 2x, img/matinee-soiree/matinee-soiree-637.5w.png 2.5x, img/matinee-soiree/matinee-soiree-765w.png 3x" 
+						src="img/matinee-soiree/matinee-soiree-765w.png" 
+						type="image/png">
+				</picture>
+			</span>
+
+			<!-- morning mimosa -->
+			<span itemid="https://snowpity.org/img/morning-mimosa/" itemref="metadata--creator-person-url--jr metadata--ispartof" itemscope itemtype="https://schema.org/ImageObject">
+				<picture>
+					<source srcset="img/morning-mimosa/morning-mimosa-320w.webp, img/morning-mimosa/morning-mimosa-480w.webp 1.5x, img/morning-mimosa/morning-mimosa-640w.webp 2x" type="image/webp">
+					<img 
+						alt="" 
+						class="background--mare" 
+						id="background--morning-mimosa" 
+						itemprop="contentUrl url" 
+						src="img/morning-mimosa/morning-mimosa-804w.png" 
+						srcset="img/morning-mimosa/morning-mimosa-320w.png, img/morning-mimosa/morning-mimosa-804w.png 1.5x, img/morning-mimosa/morning-mimosa-804w.png 2.5x" 
+						type="image/png">
+				</picture>
+			</span>
+
+			<!-- fair flyer -->
+			<span itemid="https://snowpity.org/img/fair-flyer/" itemref="metadata--creator-person-url--jr metadata--ispartof" itemscope itemtype="https://schema.org/ImageObject">
+				<picture>
+					<source 
+						srcset="img/fair-flyer/fair-flyer-320w.webp, img/fair-flyer/fair-flyer-480w.webp 1.5x, img/fair-flyer/fair-flyer-640w.webp 2x, img/fair-flyer/fair-flyer-800w.webp 2.5x, img/fair-flyer/fair-flyer-960w.webp 3x" 
+						type="image/webp">
+					<img 
+						alt="" 
+						class="background--mare" 
+						id="background--fair-flyer" 
+						itemprop="contentUrl url" 
+						src="img/fair-flyer/fair-flyer-1148w.png" 
+						srcset="img/fair-flyer/fair-flyer-320w.png, img/fair-flyer/fair-flyer-480w.png 1.5x, img/fair-flyer/fair-flyer-640w.png 2x, img/fair-flyer/fair-flyer-1148w.png 2.5x" 
+						type="image/png">
+				</picture>
+			</span>
 		</div>
+
+		<!-- main page content starts here -->
 		<main>
 			<h1>Snowpity</h1>
 			<div class="text-outline" id="purpose-statement">
